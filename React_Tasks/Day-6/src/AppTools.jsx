@@ -24,12 +24,12 @@ export function WishList({ setCart, setTotal }){
     setTotal(prev=> prev+pr.price)
     }
     return(
-        <div>
+        <div style={{border:"5px solid white", borderRadius:"20px"}}>
             <h1>WishList</h1>
-            <div>
+            <div style={{padding:"20px"}} >
                 {products.map((pr)=>(
                         <div key={pr.id} style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-                            <p style={{ margin: 0 }}>{pr.name}</p>
+                            <p >{pr.name}</p>
                             <span>
                                 <button onClick={()=>addToCart(pr)}>Add To Cart</button>
                                 <button>Buy Now</button>
@@ -78,7 +78,7 @@ export function Cart({cart, setCart, setTotal, total}){
         setTotal(0)
     }
     return(
-        <div>
+        <div style={{border:"5px solid white", borderRadius:"20px", marginTop:"20px"}}>
             <h1>Cart</h1>
             {
                 cart.map(item=>(
